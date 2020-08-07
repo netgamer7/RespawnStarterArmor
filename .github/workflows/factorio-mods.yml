@@ -1,0 +1,3 @@
+- name: Factorio Mod Portal Publish
+  uses: shanemadden/factorio-mod-portal-publish@1.0.3
+
