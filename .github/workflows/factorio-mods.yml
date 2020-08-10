@@ -14,4 +14,4 @@ jobs:
       if: failure()
       with:
         name: github-workspace
-        path: /github/workspace/*
+        path: ${{ github.workspace }}
