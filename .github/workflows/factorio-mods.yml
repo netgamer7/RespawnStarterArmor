@@ -10,3 +10,8 @@ jobs:
       env:
         FACTORIO_PASSWORD: ${{ secrets.FACTORIO_PASSWORD }}
         FACTORIO_USER: ${{ secrets.FACTORIO_USER }}
+    - uses: actions/upload-artifact@v2
+      if: failure()
+      with:
+        name: github-workspace
+        path: /github/workspace/*
