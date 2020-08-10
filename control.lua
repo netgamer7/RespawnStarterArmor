@@ -5,10 +5,9 @@ local function give_player_items(player, items)
 end
 
 script.on_event(defines.events.on_player_respawned, function(event)
-  if settings.global["ingos-advanced-start-armor"].value == false then
+  if settings.global["respawn-starter-armor"].value == false then
     do return end
   end
-
 
   local player = game.players[event.player_index]
   if player.character then
@@ -22,9 +21,7 @@ script.on_event(defines.events.on_player_respawned, function(event)
   
     armor_items = {
       {"starter-armor", 1},
-      {"starter-robot", 100},
-      {"deconstruction-planner", 1},
-      {"blueprint", 10}
+      {"starter-robot", 100}
     }
   
     armor = {
@@ -55,7 +52,7 @@ script.on_event(defines.events.on_player_respawned, function(event)
     }
   
     production = {
-      {"stone-furnace", 99},
+      {"stone-furnace", 96},
       {"assembling-machine-1", 40},
       {"assembling-machine-2", 10},
       {"electric-mining-drill", 50},
@@ -83,7 +80,7 @@ script.on_event(defines.events.on_player_respawned, function(event)
   
     local player = game.players[event.player_index]
     
-    if settings.global["ingos-advanced-start-armor"].value then
+    if settings.global["respawn-starter-armor"].value then
       give_player_items(player, armor_items)
       local grid = player.get_inventory(defines.inventory.character_armor)[1].grid
       for  i, v in pairs(armor) do
@@ -91,20 +88,20 @@ script.on_event(defines.events.on_player_respawned, function(event)
       end	
     end
   
-    if settings.global["ingos-advanced-start-intermediates"].value then
+    if settings.global["respawn-starter-armor-intermediates"].value then
       give_player_items(player, intermediates)
     end
   
-    if settings.global["ingos-advanced-start-production"].value then
+    if settings.global["respawn-starter-armor-production"].value then
       give_player_items(player, production)
     end
-    if settings.global["ingos-advanced-start-logistics"].value then
+    if settings.global["respawn-starter-armor-logistics"].value then
       give_player_items(player, logistics)
     end
-    if settings.global["ingos-advanced-start-car"].value then
+    if settings.global["respawn-starter-armor-car"].value then
       give_player_items(player, car)
     end
-    if settings.global["ingos-advanced-start-research-toolbelt"].value then
+    if settings.global["respawn-starter-armor-research-toolbelt"].value then
       player.force.technologies["toolbelt"].researched = true
     end
   end
