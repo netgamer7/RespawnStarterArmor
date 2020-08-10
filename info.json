@@ -6,6 +6,6 @@
     "contact": "SethAble#6157 on Discord",
     "homepage": "https://github.com/netgamer7/RespawnStarterArmor",
     "factorio_version": "0.18",
-    "dependencies": ["base >= 0.18", "! ingos-advanced-start", "!NoRespawnGun"],
+    "dependencies": ["base >= 0.18"],
     "description": "After death, player respawns with armor, copied from Ingos Advanced Start armor."
 }
