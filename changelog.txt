@@ -1,4 +1,12 @@
 ---------------------------------------------------------------------------------------------------
+Version: 1.0.1
+Date: 2020-08-09  
+  Changes:
+    - Renamed setting names from Ingos-Advanced-Start to Respawn-Starter-Armor.
+    - Removed dependency block for Ingos's mod - changes do not conflict with settings renamed.
+    - Removed dependency block for NoRespawnGun mod, it can coexist as well safely.
+    - Copied missing file describing mod setting names, updated to match setting names.
+---------------------------------------------------------------------------------------------------
 Version: 1.0.0
 Date: 2020-08-07  
   Initial:
